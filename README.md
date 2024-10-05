@@ -22,7 +22,7 @@ Follow the steps below to install and run the application.
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/your-username/serasa-allowme.git
+git clone https://github.com/mathmartins2/serasa-allowme.git
 cd serasa-allowme
 ```
 
