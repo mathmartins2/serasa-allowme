@@ -34,6 +34,21 @@ Use `pnpm` to install the project's dependencies:
 pnpm install
 ```
 
+3. **Set up environment variables**:
+
+Before running the application, ensure you have your environment variables configured. The project includes an example file `.env.example` that you can copy and rename to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Then, fill in the values for `VITE_ENABLE_MOCKS` and `VITE_API_URL` in the `.env` file:
+
+```
+VITE_ENABLE_MOCKS=
+VITE_API_URL=
+```
+
 ## Running the Application
 
 To start the development server locally, run the following command:
@@ -66,35 +81,21 @@ pnpm run test
 
 ### End-to-End (E2E) Tests with Playwright
 
+**Important:** Before running the E2E tests for the first time, you need to install Playwright browsers. Run the following command:
+
+```bash
+pnpm exec playwright install
+```
+
 **Important:** To run the E2E tests, the application must be running. Ensure the development server is running with `pnpm run dev` before starting the E2E tests.
 
 To run the E2E tests, execute the following command:
 
 ```bash
-pnpm run test:e2e
+pnpm run test
 ```
 
-This will run the Playwright tests in headless mode. If you want to run the tests in non-headless mode (with a visible browser), you can modify the Playwright configuration or run the tests with the `--headed` flag:
-
-```bash
-pnpm exec playwright test --ui
-```
-
-### Running All Tests (Unit, Integration, and E2E)
-
-If you want to run **all tests**, including both unit tests and E2E tests, first ensure the development server is running by executing:
-
-```bash
-pnpm run start
-```
-
-Then, in a separate terminal window, you can run:
-
-```bash
-pnpm run test && pnpm run test:e2e
-```
-
-This command will run the unit tests and then run the E2E tests.
+This command will run both the unit tests and the E2E tests.
 
 ### Viewing Playwright Test Report
 
