@@ -11,7 +11,7 @@ export const spin = keyframes`
 
 export const Spinner = styled.div`
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #07a46c;
+  color: ${({ theme }) => theme.greenTextColor};
   border-radius: 50%;
   width: 40px;
   height: 40px;

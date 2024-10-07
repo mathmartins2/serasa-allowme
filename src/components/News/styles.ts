@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NewsContainer = styled.div`
-  background-color: #f4f4fa;
+  background-color: ${({ theme }) => theme.newContainerColor};
   padding: 20px;
   border-radius: 8px;
   width: 330px;
@@ -12,7 +12,7 @@ export const Title = styled.h3`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 24px;
-  color: #18191e;
+  color: ${({ theme }) => theme.primaryTextColor};
 `;
 
 export const NewsList = styled.ul`
@@ -42,7 +42,7 @@ export const NewsTitle = styled.p`
 
 export const NewsDate = styled.p`
   font-size: 14px;
-  color: #e04c85;
+  color: ${({ theme }) => theme.mainThemeColor};
   margin: 5px 0 0;
   font-weight: 600;
   line-height: 20px;

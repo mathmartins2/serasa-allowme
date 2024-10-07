@@ -1,5 +1,6 @@
 import axios from 'axios';
+import { parsedEnv } from '../../env';
 
 export const api = axios.create({
-  baseURL: 'https://run.mocky.io/v3/',
+  baseURL: parsedEnv.VITE_API_URL,
 });

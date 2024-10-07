@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background-color: #ececf4;
+  background-color: ${({ theme }) => theme.footerColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@ export const Logo = styled.div`
 
 export const Copyright = styled.div`
   font-size: 16px;
-  color: #58595d;
+  color: ${({ theme }) => theme.secondaryColor};
   font-weight: 400;
   line-height: 19.36px;
 `;

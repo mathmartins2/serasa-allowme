@@ -6,10 +6,10 @@ export const FilterButtonContainer = styled.div`
 
 export const Button = styled.button`
   padding: 8px 16px 8px 16px;
-  background-color: #daf2ec;
+  background-color: ${({ theme }) => theme.greenBackgroundColor};
   border: none;
   border-radius: 4px;
-  color: #07a46c;
+  color: ${({ theme }) => theme.greenTextColor};
   font-size: 16px;
   cursor: pointer;
   display: flex;
@@ -18,7 +18,7 @@ export const Button = styled.button`
   position: relative;
 
   &:hover {
-    background-color: #aaf0df;
+    background-color: ${({ theme }) => theme.greenHoverColor};
   }
 `;
 
@@ -26,7 +26,7 @@ export const DropdownList = styled.ul`
   position: absolute;
   top: 45px;
   left: 0;
-  background-color: #daf2ec;
+  background-color: ${({ theme }) => theme.greenBackgroundColor};
   border: 1px solid #ddd;
   border-radius: 4px;
   list-style: none;
@@ -41,16 +41,16 @@ export const DropdownList = styled.ul`
 export const DropdownItem = styled.li`
   padding: 10px;
   cursor: pointer;
-  color: #07a46c;
+  color: ${({ theme }) => theme.greenTextColor};
   font-weight: 600;
-  background-color: #daf2ec;
+  background-color: ${({ theme }) => theme.greenBackgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
   &:hover {
-    background-color: #aaf0df;
+    background-color: ${({ theme }) => theme.greenHoverColor};
   }
 `;
 

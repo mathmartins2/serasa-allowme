@@ -1,8 +1,9 @@
 import { http, HttpResponse } from 'msw';
+import { parsedEnv } from '../../env';
 
 export const handlers = [
   http.get(
-    'https://run.mocky.io/v3/297932b2-1303-4136-bbd1-cb20875bf87c',
+    parsedEnv.VITE_API_URL + '/297932b2-1303-4136-bbd1-cb20875bf87c',
     () => {
       return HttpResponse.json([
         {
@@ -231,7 +232,7 @@ export const handlers = [
     }
   ),
   http.get(
-    'https://run.mocky.io/v3/7342bcfd-4fe6-470e-a6df-610afebf9b65',
+    parsedEnv.VITE_API_URL + '/7342bcfd-4fe6-470e-a6df-610afebf9b65',
     () => {
       return HttpResponse.json([
         {
