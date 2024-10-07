@@ -234,68 +234,66 @@ export const handlers = [
   http.get(
     parsedEnv.VITE_API_URL + '/7342bcfd-4fe6-470e-a6df-610afebf9b65',
     () => {
-      return HttpResponse.json([
-        {
-          authorPublications: [
-            {
-              authorId: 'João Silva',
-              publicationIds: ['001', '011', '015'],
-            },
-            {
-              authorId: 'Maria Oliveira',
-              publicationIds: ['002', '006'],
-            },
-            {
-              authorId: 'Carlos Pereira',
-              publicationIds: ['003', '010'],
-            },
-            {
-              authorId: 'Ana Costa',
-              publicationIds: ['004', '016'],
-            },
-            {
-              authorId: 'Pedro Santos',
-              publicationIds: ['005', '021'],
-            },
-            {
-              authorId: 'Beatriz Lima',
-              publicationIds: ['007', '018'],
-            },
-            {
-              authorId: 'Ricardo Almeida',
-              publicationIds: ['008'],
-            },
-            {
-              authorId: 'Fernanda Souza',
-              publicationIds: ['009'],
-            },
-            {
-              authorId: 'Lucas Mendes',
-              publicationIds: ['012'],
-            },
-            {
-              authorId: 'Mariana Rocha',
-              publicationIds: ['013'],
-            },
-            {
-              authorId: 'Gabriel Ferreira',
-              publicationIds: ['014'],
-            },
-            {
-              authorId: 'Laura Martins',
-              publicationIds: ['017'],
-            },
-            {
-              authorId: 'Sofia Ribeiro',
-              publicationIds: ['019'],
-            },
-            {
-              authorId: 'Miguel Costa',
-              publicationIds: ['020'],
-            },
-          ],
-        },
-      ]);
+      return HttpResponse.json({
+        authorPublications: [
+          {
+            authorId: 'João Silva',
+            publicationIds: ['001', '011', '015'],
+          },
+          {
+            authorId: 'Maria Oliveira',
+            publicationIds: ['002', '006'],
+          },
+          {
+            authorId: 'Carlos Pereira',
+            publicationIds: ['003', '010'],
+          },
+          {
+            authorId: 'Ana Costa',
+            publicationIds: ['004', '016'],
+          },
+          {
+            authorId: 'Pedro Santos',
+            publicationIds: ['005', '021'],
+          },
+          {
+            authorId: 'Beatriz Lima',
+            publicationIds: ['007', '018'],
+          },
+          {
+            authorId: 'Ricardo Almeida',
+            publicationIds: ['008'],
+          },
+          {
+            authorId: 'Fernanda Souza',
+            publicationIds: ['009'],
+          },
+          {
+            authorId: 'Lucas Mendes',
+            publicationIds: ['012'],
+          },
+          {
+            authorId: 'Mariana Rocha',
+            publicationIds: ['013'],
+          },
+          {
+            authorId: 'Gabriel Ferreira',
+            publicationIds: ['014'],
+          },
+          {
+            authorId: 'Laura Martins',
+            publicationIds: ['017'],
+          },
+          {
+            authorId: 'Sofia Ribeiro',
+            publicationIds: ['019'],
+          },
+          {
+            authorId: 'Miguel Costa',
+            publicationIds: ['020'],
+          },
+        ],
+      });
     }
   ),
 ];

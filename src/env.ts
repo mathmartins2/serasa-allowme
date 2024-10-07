@@ -7,7 +7,7 @@ const parsedEnvValues = {
 
 const envSchema = z.object({
   VITE_API_URL: z.string().url(),
-  VITE_ENABLE_MOCKS: z.boolean(),
+  VITE_ENABLE_MOCKS: z.boolean().optional().default(false),
 });
 
 const env = envSchema.safeParse(parsedEnvValues);
