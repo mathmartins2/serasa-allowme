@@ -9,7 +9,7 @@ import { ButtonGroup } from '../components/FilterButton/styles';
 import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { useFindAuthorsQuery } from './repository/query/findAuthorsQuery';
-import { PageWrapper, ButtonGroupWrapper, ContentWrapper, ArticlesSection, Spinner } from './styles';
+import { PageWrapper, ButtonGroupWrapper, ContentWrapper, ArticlesSection, Spinner, SpinnerWrapper } from './styles';
 import { useFilteredAndSortedPosts } from '../hooks/useFilteredAndSortedPosts';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <Header />
         <ContentWrapper>
           <div style={{ textAlign: 'center', color: 'red', padding: '20px' }}>
-            {posts.isError ? "Erro ao carregar os posts." : "Erro ao carregar os autores."}
+            {posts.isError ? "Erro ao carregar os posts. Tente novamente mais tarde" : "Erro ao carregar os autores. Tente novamente mais tarde"}
           </div>
         </ContentWrapper>
         <Footer />
@@ -72,7 +72,9 @@ function App() {
       <ContentWrapper>
         <ArticlesSection>
           {posts.isLoading ? (
-            <Spinner />
+            <SpinnerWrapper>
+              <Spinner />
+            </SpinnerWrapper>
           ) : (
             sortedPosts?.map((article) => (
               <Article
@@ -86,7 +88,9 @@ function App() {
           )}
         </ArticlesSection>
         {posts.isLoading ? (
-          <Spinner />
+          <SpinnerWrapper>
+            <Spinner />
+          </SpinnerWrapper>
         ) : (
           <div>
             <News
@@ -104,3 +108,6 @@ function App() {
 }
 
 export default App;
+
+// Styles
+

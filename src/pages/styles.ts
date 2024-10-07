@@ -10,8 +10,8 @@ export const spin = keyframes`
 `;
 
 export const Spinner = styled.div`
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  color: ${({ theme }) => theme.greenTextColor};
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid ${({ theme }) => theme.greenTextColor};
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -39,4 +39,12 @@ export const ButtonGroupWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
+`;
+
+export const SpinnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
 `;
